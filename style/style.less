@@ -1,0 +1,204 @@
+// @font-face {
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-display: swap;
+//     src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Oswald';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-display: swap;
+//     src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf) format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Oswald';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-display: swap;
+//     src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+// }
+
+// @font-face {
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-display: swap;
+//     src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+// }
+
+@font-face {
+    font-family: 'Playpen_Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Playpen_Sans/PlaypenSans-VariableFont_wght.ttf);
+}
+
+@colorText: #a276ff;
+@fontOswald: "Oswald", sans-serif;
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// font-family: 'Montserrat', sans-serif; 
+// font-family: 'Oswald', sans-serif; 
+// font-family: 'Roboto', sans-serif; 
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;  //16px
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background-image: url(./img/bg.jpg);  // поставить картинку на фон
+    background-repeat: no-repeat;  // небыло >фона из неск-х img
+    background-size: cover;  // bgz заполнение картинкой cover весь фон
+    background-position: center center; // bgp x y нахождение в центре
+    // width: 100vw; // на всю ширину экрана
+    //hight: 100vh; - на всю высоту экрана
+}
+.body-bg {
+    display: flex;
+    border-color: #1b1d3a91;
+}
+.main-header {
+    background-color: #0b0b0da7;  //#0B0B0D;
+    display: inline-flex; // задать высоту и ширину тег header
+    padding-left: 93px;  // внутренний отступ слева
+    padding-right: 154px; // внутренний отступ справа
+    flex-direction: column;
+    align-items: center;
+    // height: 100vh;
+}
+.logo {   // главной класс
+    margin: 80px 0 0 0;  // внешние отступы верх\право\низ\лево
+    font-size: 3rem;
+    text-transform: uppercase;  // все буквы большие (uppercase)
+    font-family: @fontOswald;
+    font-weight: 700;  // толщина 700
+      // .logo__text
+      &__text {    // дочерний класс
+        color: @colorText;
+      }
+}
+.block-nav {
+    margin-top: 47px;  // отступ сверху на 47
+}
+.nav-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;  // по умолчанию
+    display: flex;
+    flex-direction: column; // (flex-направление)- элементы располагаются сверху вниз.
+}
+.nav-item {
+    font-family: @fontOswald;
+      // .nav-item__link
+      &__link{
+        text-decoration: none;
+        text-transform: uppercase; // все буквы большие (uppercase)
+        font-size: 17px;
+        line-height: 94px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;  // анимация all-на все действия сколько секунд и ?
+        &:hover {
+            color: @colorText;  // меняется цвет при наведении на HOME(hover)
+        }
+      }
+}
+.block-support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: @fontOswald;
+    font-size: 17px;
+    flex-grow: 1;
+
+}
+.support {
+    margin-bottom: 47px;
+    // .support__link
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+.contact {
+    // .contact__link
+    &__link {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+// .sabyr-main {
+// }
+// .social {
+// }
+
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;  // выравнивает по горизонтали старт гдавная ось
+    margin-top: 200px;  // отступ сверху на 47
+    margin-left: 207px;
+}
+
+.main-title {
+//     font-family: @fontOswald;
+//     font-weight: 700;
+//     font-size: 42px;
+//     text-transform: uppercase;
+//     margin: 0;
+//     width: 50%;
+//     span {
+//         font-size: 65px;
+//         color: @colorText;
+//         letter-spacing: 12px;
+//     }
+}
+
+.main-description {
+//     margin-top: 42px;
+//     font-size: 18px;
+//     margin-bottom: 30px;
+}
+
+.btn{
+//     background-color: transparent;
+//     border-radius: 17px;
+//     border: 2px solid #fff;
+//     padding: 20px 60px;
+}
+
+.main-btn {
+//     text-decoration: none;
+//     font-size: 20px;
+//     color: #fff;
+//     width: 50%;
+//     text-align: center;
+}
+
+.pic {
+    display: flex;
+    flex-wrap: wrap; // расположение в одну строку
+  }
+  
+  .pic img {
+    display: block;
+    position: relative;
+    
+    margin: 10px;
+    padding: 25px;
+  }
