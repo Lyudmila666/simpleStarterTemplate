@@ -1,33 +1,9 @@
 // @font-face {
-//     font-family: 'Montserrat';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-display: swap;
-//     src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
-// }
-
-// @font-face {
 //     font-family: 'Oswald';
 //     font-style: normal;
 //     font-weight: 400;
 //     font-display: swap;
 //     src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf) format('truetype');
-// }
-
-// @font-face {
-//     font-family: 'Oswald';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-display: swap;
-//     src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
-// }
-
-// @font-face {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-display: swap;
-//     src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 // }
 
 @font-face {
@@ -43,33 +19,41 @@
  
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;  // внешние отступы
+    padding: 0;  // внутренние отступы
+    box-sizing: border-box; // стиль  
 }
 
 // font-family: 'Montserrat', sans-serif; 
 // font-family: 'Oswald', sans-serif; 
 // font-family: 'Roboto', sans-serif; 
+
+ 
 html {
     font-size: 10px;
+    overflow-x: hidden;  // не дает выходить фону за пределы экрана
 }
+
 body {
     font-size: 1.6rem;  //16px
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #fff;
     background-image: url(./img/bg.jpg);  // поставить картинку на фон
+    // background-color: #a276ff;    
     background-repeat: no-repeat;  // небыло >фона из неск-х img
     background-size: cover;  // bgz заполнение картинкой cover весь фон
     background-position: center center; // bgp x y нахождение в центре
     // width: 100vw; // на всю ширину экрана
-    //hight: 100vh; - на всю высоту экрана
+    // height: 100vh; // на всю высоту экрана
 }
+
 .body-bg {
     display: flex;
-    border-color: #1b1d3a91;
+    background-color: #1b1d3a91;
+   
 }
+
 .main-header {
     background-color: #0b0b0da7;  //#0B0B0D;
     display: inline-flex; // задать высоту и ширину тег header
@@ -79,6 +63,7 @@ body {
     align-items: center;
     // height: 100vh;
 }
+
 .logo {   // главной класс
     margin: 80px 0 0 0;  // внешние отступы верх\право\низ\лево
     font-size: 3rem;
@@ -90,16 +75,19 @@ body {
         color: @colorText;
       }
 }
+
 .block-nav {
     margin-top: 47px;  // отступ сверху на 47
 }
+
 .nav-list {
     padding: 0;
-    margin: 0;
-    list-style: none;  // по умолчанию
+    margin: 0 5px 0 0;
+    list-style: none;  // по умолчанию - без точек слева от item
     display: flex;
     flex-direction: column; // (flex-направление)- элементы располагаются сверху вниз.
 }
+
 .nav-item {
     font-family: @fontOswald;
       // .nav-item__link
@@ -115,90 +103,209 @@ body {
         }
       }
 }
+
 .block-support {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-transform: uppercase;
+    text-transform: uppercase; // все буквы большие (uppercase)
     font-family: @fontOswald;
     font-size: 17px;
     flex-grow: 1;
+    margin-top: 200px;
 
 }
+
 .support {
     margin-bottom: 47px;
     // .support__link
     &__link {
         text-decoration: none;
-        color: #fff;
+        color: lightgray;
     }
 }
+
 .contact {
     // .contact__link
     &__link {
         text-decoration: none;
-        color: #fff;
+        color: lightgray;
     }
 }
 
-// .sabyr-main {
-// }
-// .social {
-// }
+.inf {
+    margin: 30px 0 10px 20px;
+    color: gray;
+}
 
+.inf a {
+    font-family: @fontOswald;
+    
+
+}
+
+.sabyr-main {
+     
+    
+}
+
+.social {
+    display: inline-flex;  // принимает пространство объекта картинки
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 80%;
+    background-color: #a276ff;   
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    // margin: 0 750px 0 1200px;
+}
+
+.social-block {
+        margin: 0 30px;
+}
+
+  
+.social img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
 
 .main-block {
     display: flex;
     flex-direction: column;
     justify-content: start;  // выравнивает по горизонтали старт гдавная ось
-    margin-top: 200px;  // отступ сверху на 47
+    margin-top: 250px;  // отступ сверху 
     margin-left: 207px;
 }
 
 .main-title {
-//     font-family: @fontOswald;
-//     font-weight: 700;
-//     font-size: 42px;
-//     text-transform: uppercase;
-//     margin: 0;
-//     width: 50%;
-//     span {
-//         font-size: 65px;
-//         color: @colorText;
-//         letter-spacing: 12px;
-//     }
+    font-family: @fontOswald;
+    font-weight: 700;
+    font-size: 47px;
+    color: #fff;
+    text-transform: uppercase; // все буквы большие (uppercase)
+    margin: 0;
+    width: 50%;
+}
+.span {
+    font-size: 99px;
+    font-family: @fontOswald;
+    font-weight: 700; 
+    text-transform: uppercase; // все буквы большие (uppercase)
+    color: @colorText;
+    // letter-spacing: 3px; // растянуть 
 }
 
 .main-description {
-//     margin-top: 42px;
-//     font-size: 18px;
-//     margin-bottom: 30px;
+    margin: 20px 0 0 0;
+    text-align: left;
+    // padding: 0 800px 0 0;
+    font-size: 29px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;    
 }
 
 .btn{
-//     background-color: transparent;
-//     border-radius: 17px;
-//     border: 2px solid #fff;
-//     padding: 20px 60px;
+    background-color: transparent;  // не будет цвета
+    border-radius: 17px;   // закругление
+    border: 2.5px solid #fff; // толщина-сплошная линия белая
+    padding: 20px 60px;  // внутренние отступы сверху\снизу 20 справа\слева 60
 }
 
 .main-btn {
-//     text-decoration: none;
-//     font-size: 20px;
-//     color: #fff;
-//     width: 50%;
-//     text-align: center;
+    text-decoration: none;
+    font-family: @fontOswald;
+    font-size: 20px;
+    color: #fff;
+    width: 28%;
+    text-align: center;
 }
 
-.pic {
+.pic { 
     display: flex;
+    align-items: flex-end; 
     flex-wrap: wrap; // расположение в одну строку
-  }
+    // width: 230px;
+}
   
-  .pic img {
-    display: block;
-    position: relative;
-    
-    margin: 10px;
-    padding: 25px;
-  }
+.pic img {
+    // display: block;
+    // position: relative;  
+    width: 230px;
+    border-radius: 11px 11px 11px 11px;  
+    margin: 50px 45px 0 0;       
+}
+
+.news {
+    margin-top: 50px; 
+}
+
+.news-pic {
+    margin-left: 8px;
+}
+  
+
+.main-descrip {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500; 
+    line-height: 165.688%;
+    margin: 12px 0 40px 0; // отступ сверху на 
+}
+
+@media (max-width:1050px) {
+    .main-btn {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 11px 22px;
+        border-radius: 12px;
+    }
+    .social {
+        padding: 4px;
+    }
+    .social-block {
+        margin: 0 16px;
+    }
+}
+
+@media (max-width:830px) {
+    .main-header {
+        padding-left: 32px;
+        padding-right: 58px;
+    }
+    .main-block {
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+    .main-title {
+        font-size: 34px;
+    }
+    .span {
+        font-size: 69px;
+    }
+    .main-description {
+        font-size: 23px;
+    }
+    .main-btn {
+        font-size: 12px;
+    }
+    .btn {
+        padding: 9px 29px;
+        border-radius: 9px;
+    }
+    .social {
+        padding: 1px;
+    }
+    .social-block {
+        margin: 0 12px;
+    }
+    .inf {
+        margin: 0 0 60px 19px;
+    }
+
+}
+
