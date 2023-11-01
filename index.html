@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css"> <!--Линк документа сосстилизацией-->
 </head>
 <body>
     <div class="body-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="42" viewBox="0 0 5 42" fill="none">
+        <path d="M0 0C2.76142 0 5 2.23858 5 5V37C5 39.7614 2.76142 42 0 42V0Z" fill="#A276FF"/>
+        </svg>
         <header class="main-header">
             <div class="logo">
                 <span class="logo__text">your</span>logo
@@ -31,36 +34,52 @@
             </div>
             <div class="block-support">
                 <div class="support">
-                    <a href="#" class="block-support__link support__link">support</a>
+                    <a href="#" class="support__link">support</a>
                 </div>
                 <div class="contact">
-                    <a href="#" class="block-support__link contact__link">contact</a>
-                </div>
+                    <a href="#" class="contact__link">contact</a>
+                </div>   
+            </div>
+            <div class="inf">
+                <a>©2020 ACME LLC.</a>
             </div>
         </header>
         <main class="sabyr-main">
             <div class="social"> 
-                <!--блок соцсети птичка-->               
+                <a class="social-block" href="#"><img src="./style/img/Vector.svg" alt="Vector Icon"></a>                
+                <a class="social-block" href="#"><img src="./style/img/facebook.svg" alt="Facebook Icon"></a> 
+                             
             </div>                
             <section class="main-block">
-                <h1 class="main-title">simple starter</h1>
-                <span>template</span>
-                <p class="main-description">A clean simple desktop design with space to add & alter items instead of removing them. An easy to use starting 
-                    point for beginners to make mockups or designs that look nice, quickly.</p>
+                <h1 class="main-title">simple starter
+                <span class="span">template</span></h1>
+                <p class="main-description">A clean simple desktop design with space to add & alter items instead of removing them. An easy to use starting point for beginners to make mockups or designs that look nice, quickly.</p>
                 <a href="#" class="btn main-btn">LEARN MORE</a>    
-            </section>    
-            <div class="pic">
-                <img src="./style/img/img1.jpg" alt="Кровавая луна">
-                <img src="./style/img/img2.jpg" alt="Вечерние горы">
-                <img src="./style/img/img3.jpg" alt="Светящийся шар в темноте">
-                <img src="./style/img/img4.jpg" alt="Человек с автоматом">
-                
-            </div>
+                <div class="pic">
+                    <img src="./style/img/img1.jpg" alt="Кровавая луна">
+                    <img src="./style/img/img2.jpg" alt="Вечерние горы">
+                    <img src="./style/img/img3.jpg" alt="Светящийся шар в темноте">
+                    <img src="./style/img/img4.jpg" alt="Человек с автоматом">
+                </div>
+                <div class="news">
+                    <h1 class="main-title">NEWS
+                        <svg class="news-pic" xmlns="http://www.w3.org/2000/svg" width="33" height="26" viewBox="0 0 33 26" fill="none">
+                        <path d="M3.19246 2L16.5 23.1805L29.8075 2H3.19246Z" stroke="#A276FF" stroke-width="3"/>
+                        </svg>
+                    </h1>
+                    <p class="main-descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sed diam ut consectetur. Nunc maximus magna dolor, eget accumsan leo tempor eget.</p>
+                    
+                </div> 
+            </section>  
+              
+            
         </main>
     </div>
 
     <di></di>
     <footer class="sabyr-footer">
+         
+         
     </footer>
 </body>
 </html>
